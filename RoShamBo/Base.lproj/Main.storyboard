@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="MainViewController" customModule="RoShamBo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,127 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-61-Sp3">
+                                <rect key="frame" x="140" y="260" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4b6-JN-nub"/>
+                                    <constraint firstAttribute="width" constant="80" id="YAS-i5-eaj"/>
+                                </constraints>
+                                <state key="normal" image="pickRock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9L8-aQ-Cje"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-7M-hCR">
+                                <rect key="frame" x="380" y="260" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="gtg-Pm-Cys"/>
+                                    <constraint firstAttribute="height" constant="80" id="tqw-EE-TAL"/>
+                                </constraints>
+                                <state key="normal" image="pickScissors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playScissors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qnc-ZD-mk0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nL-uG-hsh">
+                                <rect key="frame" x="260" y="140" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GSL-Ua-qbA"/>
+                                    <constraint firstAttribute="width" constant="80" id="kIW-DY-8LO"/>
+                                </constraints>
+                                <state key="normal" image="pickPaper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HzR-G8-kNQ"/>
+                                    <segue destination="ChE-L6-wMk" kind="presentation" identifier="sendPaper" id="whE-gm-oKn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EH4-7M-hCR" firstAttribute="leading" secondItem="4nL-uG-hsh" secondAttribute="trailing" constant="40" id="ELL-qb-Gm7"/>
+                            <constraint firstAttribute="centerY" secondItem="3cg-61-Sp3" secondAttribute="centerY" id="SFU-pg-d6d"/>
+                            <constraint firstItem="4nL-uG-hsh" firstAttribute="leading" secondItem="3cg-61-Sp3" secondAttribute="trailing" constant="40" id="TVn-N0-1Kv"/>
+                            <constraint firstAttribute="centerY" secondItem="EH4-7M-hCR" secondAttribute="centerY" id="Xkb-Im-9V4"/>
+                            <constraint firstItem="3cg-61-Sp3" firstAttribute="top" secondItem="4nL-uG-hsh" secondAttribute="bottom" constant="40" id="b3K-oN-Hnh"/>
+                            <constraint firstAttribute="centerX" secondItem="4nL-uG-hsh" secondAttribute="centerX" id="rY1-5c-D9y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="44R-zs-bYm">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="ChE-L6-wMk" customClass="ResultViewController" customModule="RoShamBo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sjk-j3-86n"/>
+                        <viewControllerLayoutGuide type="bottom" id="yY9-sw-g9x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Evm-bI-PkL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-A7-SqV">
+                                <rect key="frame" x="200" y="140" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6hw-wC-bGF"/>
+                                    <constraint firstAttribute="height" constant="200" id="iSd-DD-nKA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9M-sg-MXt">
+                                <rect key="frame" x="240" y="420" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jCh-BM-g1u"/>
+                                </constraints>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="ChE-L6-wMk" eventType="touchUpInside" id="Jgp-hL-p64"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGk-Xq-vOh">
+                                <rect key="frame" x="200" y="111" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MdN-4k-QIw"/>
+                                    <constraint firstAttribute="height" constant="21" id="ax7-tk-2xX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QGk-Xq-vOh" secondAttribute="centerX" id="GcW-qe-4tZ"/>
+                            <constraint firstItem="wvJ-A7-SqV" firstAttribute="top" secondItem="QGk-Xq-vOh" secondAttribute="bottom" constant="8" id="OEX-4t-xDe"/>
+                            <constraint firstItem="wvJ-A7-SqV" firstAttribute="top" secondItem="Sjk-j3-86n" secondAttribute="bottom" constant="120" id="a8v-Zn-4BW"/>
+                            <constraint firstItem="M9M-sg-MXt" firstAttribute="top" secondItem="wvJ-A7-SqV" secondAttribute="bottom" constant="80" id="hXh-ha-fQw"/>
+                            <constraint firstAttribute="centerX" secondItem="wvJ-A7-SqV" secondAttribute="centerX" id="v5W-HU-SMb"/>
+                            <constraint firstAttribute="centerX" secondItem="M9M-sg-MXt" secondAttribute="centerX" id="xBF-Se-2qv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="wvJ-A7-SqV" id="JJ8-74-mBd"/>
+                        <outlet property="resultLabel" destination="QGk-Xq-vOh" id="dPw-bz-fnz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD1-Gj-Wgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="334"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="pickPaper" width="75" height="65"/>
+        <image name="pickRock" width="75" height="65"/>
+        <image name="pickScissors" width="75" height="65"/>
+    </resources>
 </document>

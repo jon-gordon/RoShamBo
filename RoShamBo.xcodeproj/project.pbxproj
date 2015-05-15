@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		FC1596C01B0693EF007EFF0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596BF1B0693EF007EFF0E /* AppDelegate.swift */; };
-		FC1596C21B0693EF007EFF0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596C11B0693EF007EFF0E /* ViewController.swift */; };
+		FC1596C21B0693EF007EFF0E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596C11B0693EF007EFF0E /* MainViewController.swift */; };
 		FC1596C51B0693EF007EFF0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1596C31B0693EF007EFF0E /* Main.storyboard */; };
 		FC1596C71B0693EF007EFF0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1596C61B0693EF007EFF0E /* Images.xcassets */; };
 		FC1596CA1B0693EF007EFF0E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1596C81B0693EF007EFF0E /* LaunchScreen.xib */; };
 		FC1596D61B0693EF007EFF0E /* RoShamBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596D51B0693EF007EFF0E /* RoShamBoTests.swift */; };
+		FC1596E01B069FAC007EFF0E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		FC1596BA1B0693EF007EFF0E /* RoShamBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoShamBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1596BE1B0693EF007EFF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1596BF1B0693EF007EFF0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC1596C11B0693EF007EFF0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC1596C11B0693EF007EFF0E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC1596C41B0693EF007EFF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC1596C61B0693EF007EFF0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC1596C91B0693EF007EFF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FC1596CF1B0693EF007EFF0E /* RoShamBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoShamBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1596D41B0693EF007EFF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1596D51B0693EF007EFF0E /* RoShamBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoShamBoTests.swift; sourceTree = "<group>"; };
+		FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				FC1596BF1B0693EF007EFF0E /* AppDelegate.swift */,
-				FC1596C11B0693EF007EFF0E /* ViewController.swift */,
+				FC1596C11B0693EF007EFF0E /* MainViewController.swift */,
 				FC1596C31B0693EF007EFF0E /* Main.storyboard */,
 				FC1596C61B0693EF007EFF0E /* Images.xcassets */,
 				FC1596C81B0693EF007EFF0E /* LaunchScreen.xib */,
 				FC1596BD1B0693EF007EFF0E /* Supporting Files */,
+				FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */,
 			);
 			path = RoShamBo;
 			sourceTree = "<group>";
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1596C21B0693EF007EFF0E /* ViewController.swift in Sources */,
+				FC1596C21B0693EF007EFF0E /* MainViewController.swift in Sources */,
 				FC1596C01B0693EF007EFF0E /* AppDelegate.swift in Sources */,
+				FC1596E01B069FAC007EFF0E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

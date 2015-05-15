@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  RoShamBo
 //
 //  Created by Jon Gordon on 15/05/2015.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func playRock(sender: UIButton) {
     }
 
+    @IBAction func playPaper(sender: UIButton) {
+    }
 
+    @IBAction func playScissors(sender: UIButton) {
+    }
 }
 
