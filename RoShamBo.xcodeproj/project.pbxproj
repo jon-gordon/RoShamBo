@@ -14,6 +14,7 @@
 		FC1596CA1B0693EF007EFF0E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1596C81B0693EF007EFF0E /* LaunchScreen.xib */; };
 		FC1596D61B0693EF007EFF0E /* RoShamBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596D51B0693EF007EFF0E /* RoShamBoTests.swift */; };
 		FC1596E01B069FAC007EFF0E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */; };
+		FC5032FF1B07290500138775 /* RoShamBoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5032FE1B07290500138775 /* RoShamBoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		FC1596D41B0693EF007EFF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1596D51B0693EF007EFF0E /* RoShamBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoShamBoTests.swift; sourceTree = "<group>"; };
 		FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FC5032FE1B07290500138775 /* RoShamBoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoShamBoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FC1596C81B0693EF007EFF0E /* LaunchScreen.xib */,
 				FC1596BD1B0693EF007EFF0E /* Supporting Files */,
 				FC1596DF1B069FAC007EFF0E /* ResultViewController.swift */,
+				FC5032FE1B07290500138775 /* RoShamBoModel.swift */,
 			);
 			path = RoShamBo;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				FC1596C21B0693EF007EFF0E /* MainViewController.swift in Sources */,
 				FC1596C01B0693EF007EFF0E /* AppDelegate.swift in Sources */,
+				FC5032FF1B07290500138775 /* RoShamBoModel.swift in Sources */,
 				FC1596E01B069FAC007EFF0E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				FC1596DB1B0693EF007EFF0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC1596DC1B0693EF007EFF0E /* Build configuration list for PBXNativeTarget "RoShamBoTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				FC1596DE1B0693EF007EFF0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
