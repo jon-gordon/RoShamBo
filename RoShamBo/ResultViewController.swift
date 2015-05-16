@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultImage: UIImageView!
+    var move: Match!
     
     @IBAction func dismiss(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)

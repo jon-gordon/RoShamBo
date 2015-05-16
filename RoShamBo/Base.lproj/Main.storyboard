@@ -26,7 +26,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9L8-aQ-Cje"/>
+                                    <action selector="playMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Glh-cD-qDS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-7M-hCR">
@@ -39,7 +39,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playScissors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qnc-ZD-mk0"/>
+                                    <action selector="playMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a6M-aB-9ie"/>
+                                    <segue destination="ChE-L6-wMk" kind="presentation" identifier="playScissors" id="sje-0Z-aIh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nL-uG-hsh">
@@ -52,8 +53,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HzR-G8-kNQ"/>
-                                    <segue destination="ChE-L6-wMk" kind="presentation" identifier="sendPaper" id="whE-gm-oKn"/>
+                                    <action selector="playMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6He-6w-Mc7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,6 +67,12 @@
                             <constraint firstAttribute="centerX" secondItem="4nL-uG-hsh" secondAttribute="centerX" id="rY1-5c-D9y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playPaper" destination="4nL-uG-hsh" id="Vn9-qy-mSy"/>
+                        <outlet property="playRock" destination="3cg-61-Sp3" id="Tx1-eJ-SXF"/>
+                        <outlet property="playScissors" destination="EH4-7M-hCR" id="teB-MQ-S4M"/>
+                        <segue destination="ChE-L6-wMk" kind="presentation" identifier="playPaper" id="lny-TG-VKw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CD1-Gj-Wgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="995"/>
+            <point key="canvasLocation" x="1175" y="349"/>
         </scene>
     </scenes>
     <resources>
@@ -138,4 +144,7 @@
         <image name="pickRock" width="75" height="65"/>
         <image name="pickScissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lny-TG-VKw"/>
+    </inferredMetricsTieBreakers>
 </document>
